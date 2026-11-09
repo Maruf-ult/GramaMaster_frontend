@@ -1,0 +1,34 @@
+import {AnswerReviewRequest} from '../types/exams.ts'
+import {DifficultyType} from '../types/ai.ts'
+
+
+export interface PracticeHistoryRequest{
+    id:string;
+    topic:string;
+    score:number;
+    completedAt:Date;
+}
+
+export interface PracticeResultRequest{
+    totalQuestions:number;
+    correctAnswers:number;
+    scorePercentage:number;
+    reviews:AnswerReviewRequest[];
+}
+
+export interface PracticeSubmissionRequest{
+    studentId:number;
+    answers:PracticeAnswerRequest[];
+}
+
+export interface PracticeAnswerRequest{
+    problemId:string;
+    studentAnswer:string;
+}
+
+export interface StartPracticeRequest{
+    topicId:string;
+    curriculumId:string;
+    difficulty:DifficultyType;
+    questionCount:number;
+}
