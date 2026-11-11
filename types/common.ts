@@ -21,3 +21,10 @@ export interface QueryRequest{
     pageNumber:number;
     pageSize:number;
 }
+
+export interface UploadImageResponse {
+    imageUrl: string;
+    fullUrl: string;
+    fileName: string;
+    fileSize: number;
+}

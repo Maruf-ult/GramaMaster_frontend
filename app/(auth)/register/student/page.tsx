@@ -10,6 +10,8 @@ import { apiEndpoints } from "@/lib/api/endpoints";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { toast } from "sonner";
+import { redirect } from "next/dist/server/api-utils";
 
 const boards: EducationBoard[] = [
   "Dhaka",
@@ -55,6 +57,8 @@ export default function StudentRegisterForm() {
         method: "POST",
         body: JSON.stringify(data),
       });
+      toast.success("Registration Successful");
+      redirect(response, "/student/dashboard");
       console.log("Registration Successful", response);
     } catch (error) {
       console.log("Registration failed", error);
@@ -63,7 +67,7 @@ export default function StudentRegisterForm() {
 
   return (
     <div className="mx-auto max-w-2xl rounded-xl border p-6">
-      <h1 className="mb-2 text-2xl font-bold"> 
+      <h1 className="mb-2 text-2xl font-bold">
         Student Registration
       </h1>
       <p className="mb-6 text-sm text-gray-500">
@@ -77,35 +81,35 @@ export default function StudentRegisterForm() {
           <p className="text-sm text-destructive">{errors.fullName?.message}</p>
         </div>
 
-  
+
         <div className="space-y-2">
           <label>Email</label>
           <Input {...register("email")} type="email" placeholder="Enter your email" />
           <p className="text-sm text-destructive">{errors.email?.message}</p>
         </div>
 
-      
+
         <div className="space-y-2">
           <label>Password</label>
           <Input {...register("password")} type="password" placeholder="Create a password" />
           <p className="text-sm text-destructive">{errors.password?.message}</p>
         </div>
 
-        
+
         <div className="space-y-2">
           <label>Confirm Password</label>
           <Input {...register("confirmPassword")} type="password" placeholder="Confirm your password" />
           <p className="text-sm text-destructive">{errors.confirmPassword?.message}</p>
         </div>
 
-      
+
         <div className="space-y-2">
           <label>Institute Name</label>
           <Input {...register("instituionName")} placeholder="Enter your school or college" />
           <p className="text-sm text-destructive">{errors.instituionName?.message}</p>
         </div>
 
-     
+
         <div className="space-y-2">
           <label>Curriculum</label>
           <Select
@@ -128,7 +132,7 @@ export default function StudentRegisterForm() {
           <p className="text-sm text-destructive">{errors.curriculumType?.message}</p>
         </div>
 
-    
+
         <div className="space-y-2">
           <label>Study Group</label>
           <Select
@@ -151,7 +155,7 @@ export default function StudentRegisterForm() {
           <p className="text-sm text-destructive">{errors.group?.message}</p>
         </div>
 
-    
+
         <div className="space-y-2">
           <label>Exam Batch Year</label>
           <Input
@@ -163,7 +167,7 @@ export default function StudentRegisterForm() {
           <p className="text-sm text-destructive">{errors.examBatchYear?.message}</p>
         </div>
 
-    
+
         <div className="space-y-2">
           <label>Education Board</label>
           <Select

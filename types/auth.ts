@@ -1,16 +1,16 @@
 export type CurriculumType = "SSC" | "HSC" | "Dakhil";
 export type StudyGroup = "Science" | "Arts" | "BusinessStudies";
-export type EducationBoard = 
-  | "Dhaka" 
-  | "Chattogram" 
-  | "Rajshahi" 
-  | "Jashore" 
-  | "Cumilla" 
-  | "Barisal" 
-  | "Sylhet" 
-  | "Dinajpur" 
-  | "Mymensingh" 
-  | "Madrasah" 
+export type EducationBoard =
+  | "Dhaka"
+  | "Chattogram"
+  | "Rajshahi"
+  | "Jashore"
+  | "Cumilla"
+  | "Barisal"
+  | "Sylhet"
+  | "Dinajpur"
+  | "Mymensingh"
+  | "Madrasah"
   | "Technical";
 
 export interface User {
@@ -64,7 +64,7 @@ export interface ResetPasswordRequest {
 
 export type UserRole = "Student" | "Teacher" | "Admin";
 
-export interface LoginResponseDto {
+export interface LoginResponseRequest {
   userId: string;
   fullName: string;
   email: string;

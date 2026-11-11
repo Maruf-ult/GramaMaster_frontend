@@ -114,6 +114,10 @@ export const apiEndpoints = {
     studentProfile: (userId: string) => `/api/Users/${userId}/student-profile` as const,
     updateStatus: (userId: string) => `/api/Users/${userId}/status` as const,
     delete: (userId: string) => `/api/Users/${userId}` as const
+  },
+  upload: {
+    profileImage: "/api/Uploads/profile-image" as const,
+    authProfileImage: "/api/Auth/upload-profile-image" as const
   }
 } as const;
 
