@@ -102,6 +102,8 @@ export const teacherRegisterSchema = z
             }
         ),
 
+        profileImageUrl: z.string().optional()
+
 
 
     })

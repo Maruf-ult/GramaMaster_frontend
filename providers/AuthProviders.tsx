@@ -2,7 +2,7 @@
 
 import { StoredUser, tokenStorage } from "@/lib/auth/token-storage"
 import { LoginResponseRequest, UserRole } from "@/types/auth";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { createContext, ReactNode, useEffect, useState } from "react";
 
 interface AuthContextType {
