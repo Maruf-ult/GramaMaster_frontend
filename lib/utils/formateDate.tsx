@@ -1,7 +1,9 @@
-export function formatDate(date:string):string{
-    return new Date(date).toLocaleDateString("en-GB",{
-        day:"2-digit",
-        month:"short",
-        year:"numeric",
+export function formatDate(date: Date | string): string {
+    return new Date(date).toLocaleDateString("en-GB", {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
     });
 }
