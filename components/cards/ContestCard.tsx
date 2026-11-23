@@ -1,8 +1,8 @@
 import { formatDate } from "@/lib/utils/formateDate";
 import { ContestCardRequest } from "@/types/contests";
-import { cn } from "cn";
 import { CalendarClock, CheckCircle2, Clock, Globe, Lock, PlayCircle, Trophy, Users } from "lucide-react";
 import { Button } from "../ui/button";
+import { cn } from "@/lib/utils";
 
 export type TabKey = "upcoming" | "ongoing" | "past";
 
