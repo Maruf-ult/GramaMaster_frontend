@@ -1,6 +1,10 @@
-import React from "react";
+import DashboardLayout from "@/components/layout/DashboardLayout";
+import { teacherSidebarItems } from "@/lib/constants/teacher_sidebar";
 
-export default function TeacherLayout({ children }: { children: React.ReactNode }) {
-  return <div className="min-h-screen bg-background">{children}</div>;
+export default function TeacherLayout({ children, }: { children: React.ReactNode }) {
+  return (
+    <DashboardLayout sidebarItems={teacherSidebarItems}>
+      {children}
+    </DashboardLayout>
+  );
 }
-

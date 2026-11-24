@@ -26,7 +26,7 @@ export const contestSchema = z.object({
         .string()
         .min(1, "End date is required."),
 
-    // schema.ts
+
     durationMinutes: z
         .number({ message: "Duration is required." })
         .min(5, "Minimum 5 minutes.")

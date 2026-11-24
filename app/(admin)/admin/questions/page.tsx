@@ -17,7 +17,7 @@ export default function AdminGrammarRulesPage() {
     useEffect(() => {
         const fetchRules = async () => {
             try {
-                // Using grammars endpoint — you may need to add getAll to endpoints.ts
+
                 const res = await apiClient<ApiResponse<GrammarRuleRequest[]>>(
                     "/api/Grammars"
                 );
