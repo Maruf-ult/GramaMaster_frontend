@@ -48,6 +48,7 @@ export const apiEndpoints = {
     review: (attemptId: string) => `/api/Exams/attempt/${attemptId}/review` as const
   },
   grammars: {
+    getAll: "/api/Grammars" as const,
     create: "/api/Grammars" as const,
     update: (id: string) => `/api/Grammars/${id}` as const,
     delete: (id: string) => `/api/Grammars/${id}` as const,

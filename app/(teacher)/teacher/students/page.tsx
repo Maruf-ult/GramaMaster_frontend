@@ -1,3 +1,5 @@
+"use client";
+
 import { CreateTeamDialog } from "@/components/cards/CreateTeamDialog";
 import { TeamAccordion } from "@/components/cards/TeamAccordion";
 import { Button } from "@/components/ui/button";

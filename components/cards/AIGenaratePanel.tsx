@@ -1,3 +1,5 @@
+"use client";
+
 import { apiClient } from "@/lib/api/api-client";
 import { apiEndpoints } from "@/lib/api/endpoints";
 import { AIQuestionDto, DifficultyType, GenerateQuestionsRequest, ProblemType } from "@/types/ai";

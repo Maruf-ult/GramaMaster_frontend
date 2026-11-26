@@ -1,47 +1,41 @@
 "use client";
 
 import { useEffect } from "react";
-import Link from "next/link";
-import { AlertTriangle, RefreshCw, Home } from "lucide-react";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { useRouter } from "next/navigation";
+import { AlertTriangle, RefreshCw, LayoutDashboard } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-export default function RootError({
+export default function TeacherError({
   error,
   reset,
 }: {
   error: Error & { digest?: string };
   reset: () => void;
 }) {
-  useEffect(() => {
-    console.error("[Root Error]", error);
-  }, [error]);
+  useEffect(() => { console.error("[Teacher Error]", error); }, [error]);
+  const router = useRouter();
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-6 bg-background">
-      <div className="max-w-md w-full text-center space-y-5">
-        <div className="w-14 h-14 rounded-full bg-destructive/10 flex items-center justify-center mx-auto">
-          <AlertTriangle className="w-7 h-7 text-destructive" />
+    <div className="flex items-center justify-center min-h-[60vh] p-6">
+      <div className="max-w-sm w-full text-center space-y-5">
+        <div className="w-12 h-12 rounded-xl bg-destructive/10 flex items-center justify-center mx-auto">
+          <AlertTriangle className="w-6 h-6 text-destructive" />
         </div>
         <div>
-          <h1 className="text-xl font-bold">Something went wrong</h1>
-          <p className="text-sm text-muted-foreground mt-2 leading-relaxed">
-            {error.message || "An unexpected error occurred. Please try again."}
+          <h2 className="text-lg font-bold">Something went wrong</h2>
+          <p className="text-sm text-muted-foreground mt-1.5">
+            {error.message || "Could not load this page."}
           </p>
-          {error.digest && (
-            <p className="text-xs text-muted-foreground/60 mt-1 font-mono">
-              Error ID: {error.digest}
-            </p>
-          )}
         </div>
-        <div className="flex gap-3 justify-center">
-          <Button variant="outline" onClick={reset}>
-            <RefreshCw className="w-4 h-4 mr-2" />
-            Try Again
+        <div className="flex gap-2 justify-center">
+          <Button variant="outline" size="sm" onClick={reset}>
+            <RefreshCw className="w-4 h-4 mr-1.5" />
+            Retry
           </Button>
-          <Link href="/" className={buttonVariants()}>
-            <Home className="w-4 h-4 mr-2" />
-            Go Home
-          </Link>
+          <Button size="sm" onClick={() => router.push("/teacher/dashboard")}>
+            <LayoutDashboard className="w-4 h-4 mr-1.5" />
+            Dashboard
+          </Button>
         </div>
       </div>
     </div>

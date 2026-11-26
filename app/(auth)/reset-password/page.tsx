@@ -10,7 +10,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { CheckCircle2, Eye, EyeOff, Loader, Loader2, Lock } from 'lucide-react';
 import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
-import { useRouter } from 'next/router';
+import { useRouter } from "next/navigation";
 import React, { Suspense, useState } from 'react'
 import { useForm } from 'react-hook-form';
 import { toast } from 'sonner';

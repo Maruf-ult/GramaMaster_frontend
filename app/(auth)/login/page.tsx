@@ -125,7 +125,7 @@ export default function LoginPage() {
         </Button>
 
         <div className="pt-4 border-t text-center space-y-2">
-          <p className="text-sm text-muted-foreground">Don't have an account yet?</p>
+          <p className="text-sm text-muted-foreground">Don&apos;t have an account yet?</p>
           <div className="flex justify-center gap-4 text-sm font-semibold">
             <Link href="/register/student" className="text-primary hover:underline">
               Register as Student

@@ -1,3 +1,5 @@
+"use client";
+
 import { CreateTeamForm, createTeamSchema } from "@/features/schemas/createTeamSchema";
 import { apiClient } from "@/lib/api/api-client";
 import { apiEndpoints } from "@/lib/api/endpoints";

@@ -10,7 +10,7 @@ import { ExamResultRequest } from "@/types/exams";
 import { cn } from "cn";
 import { ArrowLeft, Loader2, Trophy } from "lucide-react";
 import { useSearchParams } from "next/navigation";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { Suspense, use, useEffect, useState } from "react";
 import { toast } from "sonner";
 

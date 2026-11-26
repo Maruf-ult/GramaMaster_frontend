@@ -135,7 +135,7 @@ export default function StudentRegisterPage() {
               <UploadCloud className="w-4 h-4" />
               {imagePreview ? "Change Photo" : "Upload Profile Photo (Optional)"}
             </Label>
-            <Input id="avatar-upload" type="file" accept="image/*" className="hidden" onChange={handleImageChange} />
+            <Input id="avatar-upload" type="file" accept="image/jpeg,image/png,image/webp" className="hidden" onChange={handleImageChange} />
             <p className="text-xs text-muted-foreground mt-0.5">JPG, PNG, or WEBP up to 5 MB</p>
           </div>
         </div>

@@ -1,3 +1,5 @@
+"use client";
+
 import { AIGeneratePanel } from "@/components/cards/AIGenaratePanel";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -10,7 +12,7 @@ import { ApiResponse } from "@/types/common";
 import { CreateContestRequest } from "@/types/contests";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ChevronLeft, Loader2, Plus, Trophy, X } from "lucide-react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { toast } from "sonner";

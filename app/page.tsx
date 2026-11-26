@@ -1,7 +1,8 @@
 import { FeatureCard } from "@/components/cards/FeatureCard";
 import { Stat } from "@/components/cards/Stat";
 import { Step } from "@/components/cards/Step";
-import { ArrowRight, BarChart2, BookOpen, Brain, GraduationCap, Link, MessageSquare, Sparkles, Trophy, Users, Zap } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, BarChart2, BookOpen, Brain, GraduationCap, MessageSquare, Sparkles, Trophy, Users, Zap } from "lucide-react";
 
 export default function LandingPage() {
   return (

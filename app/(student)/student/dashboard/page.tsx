@@ -1,3 +1,5 @@
+"use client";
+
 import useAuth from "@/features/hooks/useAuth";
 import { apiClient } from "@/lib/api/api-client";
 import { apiEndpoints } from "@/lib/api/endpoints";

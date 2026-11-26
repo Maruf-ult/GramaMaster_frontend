@@ -15,6 +15,13 @@ import { MessageBubble } from "@/components/cards/MessageBubble";
 import { TypingIndicator } from "@/components/cards/TypingIndicator";
 
 
+const SUGGESTIONS = [
+  "Explain Narration rules with examples",
+  "Difference between Gerund and Participle?",
+  "Give me 5 Right Form of Verbs tips",
+  "How do Modifiers work in HSC grammar?",
+];
+
 export default function ChatbotPage() {
   const [sessionId, setSessionId] = useState<string>("");
   const [messages, setMessages] = useState<ChatMessageRequest[]>([]);

@@ -1,7 +1,9 @@
-export default function Loading() {
+import { DashboardSkeleton } from "@/components/ui/skeleton-card";
+
+export default function RootLoading() {
     return (
-        <div className="flex items-center justify-center min-h-screen">
-            <p>Loading...</p>
+        <div className="p-6">
+            <DashboardSkeleton />
         </div>
     );
 }

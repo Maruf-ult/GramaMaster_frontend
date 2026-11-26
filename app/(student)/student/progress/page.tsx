@@ -1,3 +1,5 @@
+"use client";
+
 import { AIExplanationDrawer } from "@/components/ai/AIExplanationDrawer";
 import { AccuracyBar } from "@/components/cards/AccuracyBar";
 import { Sparkline } from "@/components/cards/Sparkline";

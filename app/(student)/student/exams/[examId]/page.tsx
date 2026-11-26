@@ -8,7 +8,7 @@ import { ExamAttemptRequest, SubmitExamRequest } from "@/types/exams";
 import { ProblemDetailsRequest } from "@/types/problems";
 import { cn } from "cn";
 import { AlertTriangle, ChevronLeft, ChevronRight, Clock, Loader2, Send } from "lucide-react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { use, useCallback, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 

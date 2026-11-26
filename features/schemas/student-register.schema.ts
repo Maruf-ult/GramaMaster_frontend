@@ -51,7 +51,8 @@ export const studentRegisterSchema = z
         examBatchYear: z
             .number()
             .int("Exam batch year must be a whole number.")
-            .min(currentYear + 2, `Exam batch year cannot exceed ${currentYear + 2}.`),
+            .min(2015, "Exam batch year must be 2015 or later.")
+            .max(currentYear + 2, `Exam batch year cannot exceed ${currentYear + 2}.`),
 
         board: z.enum(
             [

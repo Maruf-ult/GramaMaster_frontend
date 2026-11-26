@@ -1,3 +1,5 @@
+"use client";
+
 import { RuleForm, ruleSchema } from "@/features/schemas/ruleSchema";
 import { apiClient } from "@/lib/api/api-client";
 import { apiEndpoints } from "@/lib/api/endpoints";

@@ -8,7 +8,7 @@ import { ApiResponse } from "@/types/common";
 import { ContestCardRequest } from "@/types/contests";
 import { cn } from "cn";
 import { Loader2, Trophy } from "lucide-react";
-import { useRouter } from "next/router"
+import { useRouter } from "next/navigation"
 import { useEffect, useState } from "react";
 import { toast } from "sonner";
 

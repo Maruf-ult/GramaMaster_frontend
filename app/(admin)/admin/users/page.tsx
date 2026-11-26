@@ -50,9 +50,10 @@ export default function AdminUsersPage() {
     const handleToggleStatus = async (user: UserRequest) => {
         setActionLoading(user.id);
         try {
-            const res = await apiClient<ApiResponse<boolean>>(apiEndpoints.users.updateStatus(user.id), {
-                method: "PATCH", body: JSON.stringify({ isActive: !user.isActive })
-            });
+            const res = await apiClient<ApiResponse<boolean>>(
+                `${apiEndpoints.users.updateStatus(user.id)}?isActive=${!user.isActive}`,
+                { method: "PATCH" }
+            );
             if (res.success) {
                 setUsers((prev) =>
                     prev.map((u) => u.id === user.id ? { ...u, isActive: !u.isActive } : u)

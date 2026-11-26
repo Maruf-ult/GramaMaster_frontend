@@ -2,7 +2,10 @@ import { LoginResponseRequest } from "@/types/auth";
 import { tokenStorage } from "../auth/token-storage";
 import { apiEndpoints } from "./endpoints";
 
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL;
+const API_BASE_URL =
+    process.env.NEXT_PUBLIC_API_URL ||
+    process.env.NEXT_PUBLIC_BASE_URL ||
+    "http://localhost:5238";
 
 let isRefreshing = false;
 let refreashPromise: Promise<string | null> | null = null;

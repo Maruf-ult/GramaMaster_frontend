@@ -1,3 +1,5 @@
+"use client";
+
 import { TeamRequest } from "@/types/team";
 import { useState } from "react";
 import { StudentRow } from "./StudentRow";

@@ -8,7 +8,7 @@ import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 import useAuth from "@/features/hooks/useAuth";
 import { SidebarItem } from "@/lib/constants/student_sidebar";
-import { cn } from "@/lib/utils";
+import { cn, getImageUrl } from "@/lib/utils";
 
 interface DashboardLayoutProps {
     children: React.ReactNode;
@@ -134,7 +134,7 @@ export default function DashboardLayout({
                         <div className="flex items-center gap-2.5">
                             {user?.profileImageUrl ? (
                                 <img
-                                    src={user.profileImageUrl}
+                                    src={getImageUrl(user.profileImageUrl)}
                                     alt={user.fullName}
                                     className="w-8 h-8 rounded-full object-cover border border-border"
                                 />

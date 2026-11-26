@@ -1,3 +1,5 @@
+"use client";
+
 import DashboardLayout from "@/components/layout/DashboardLayout";
 import { adminSidebarItems } from "@/lib/constants/admin_sidebar";
 
